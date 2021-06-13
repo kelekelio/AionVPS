@@ -24,7 +24,3 @@ REQUIRED:
 1. Upload Aion Item icons to \src\main\resources\static\server\0\item\icon (for every supported server)
 2. Uload Quest HTML files to P:\Coding\AionDB\src\main\resources\static\server\0\quest\* (for every language and supported server)
 3. Upload skill icons to \src\main\resources\static\server\0\skill\icon (for every supported server)
-
-
-APIs:
-https://github.com/kelekelio/AionDB/wiki/API
