@@ -2,8 +2,6 @@
 
 ![alt text](https://aionpowerbook.com/spring/spring_readme.jpg)
 
-Heroku example: https://stark-mountain-03127.herokuapp.com/
-
 Aion Database using Spring Boot.
 
 Technologies used so far: Spring Boot, Thymeleaf, DataTables, Bootstrap
