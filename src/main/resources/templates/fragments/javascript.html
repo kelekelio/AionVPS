@@ -18,13 +18,13 @@
 
         function selectLangFunction() {
             let lang = document.getElementById("langSelect").value;
-            $.cookie('org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE', lang, {expires: 365 });
+            $.cookie('org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE', lang, {expires: 365, path: '/' });
             window.location = window.location.href;
         }
 
         function selectServerFunction() {
             let lang = document.getElementById("serverSelect").value;
-            $.cookie('AionPB.server', lang, {expires: 365 });
+            $.cookie('AionPB.server', lang, {expires: 365, path: '/' });
             window.location = window.location.href;
         }
 
