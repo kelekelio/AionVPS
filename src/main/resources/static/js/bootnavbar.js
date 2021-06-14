@@ -14,7 +14,7 @@
         settings = $.extend(defaults, options);
 
         if(screen_width >= settings.lg){
-            $(this).find('.dropdown').hover(function() {
+            $(this).find('.hoverDrop').hover(function() {
                 $(this).addClass('show');
                 $(this).find('.dropdown-menu').first().addClass('show');
                 if(settings.animation){

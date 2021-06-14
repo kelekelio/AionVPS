@@ -15,12 +15,12 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown hoverDrop">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Items
                     </a>
                     <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown">
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Weapons
                             </a>
@@ -43,13 +43,13 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Armor
                             </a>
                             <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
                                 <li><a class="dropdown-item" th:href="@{/items/clothes}"   data-th-text="#{STR_CLOTH}"></a></li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown hoverDrop">
                                     <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Cloth
                                     </a>
@@ -67,7 +67,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Accessories
                             </a>
@@ -78,7 +78,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Skills
                             </a>
@@ -89,7 +89,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Home Décor
                             </a>
@@ -100,7 +100,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Crafting
                             </a>
@@ -111,7 +111,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Consumables
                             </a>
@@ -122,14 +122,14 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Modify
                             </a>
                             <ul class="dropdown-menu animated fadeIn" aria-labelledby="navbarDropdown1">
                                 <li><a class="dropdown-item" href="#">1</a></li>
                                 <li><a class="dropdown-item" href="#">2</a></li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown hoverDrop">
                                     <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Modify
                                     </a>
@@ -142,7 +142,7 @@
                         </li>
 
                         <div class="dropdown-divider"></div>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown hoverDrop">
                             <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Miscellaneous
                             </a>
@@ -179,6 +179,18 @@
 
             </div>
         </div>
+
+        <select class="selectpicker" id="langSelect" data-width="150px" onchange="selectLangFunction()">
+            <option data-content='<span class="flag-icon flag-icon-us"></span> English' th:value="en" th:selected="#{loca_string} == 'en'">English</option>
+            <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español' th:value="es" th:selected="#{loca_string} == 'es'">Español</option>
+        </select>
+
+        <select class="selectpicker" id="serverSelect" data-width="150px" onchange="selectServerFunction()">
+            <option data-icon="fa-heart" th:value="0" th:selected="#{server_id} == 0">Live KR</option>
+            <option data-icon="fa-heart" th:value="1" th:selected="#{server_id} == 1">Classic KR</option>
+        </select>
+
+
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
