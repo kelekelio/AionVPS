@@ -153,26 +153,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" >Disabled</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" data-th-text="#{loca_string}"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" data-th-text="#{server_id}"></a>
-                </li>
-                <li class="nav-item">
-                    <span class="restrictionTip" title="Live Server">
-                        <label for="alive" style="font-size:15px">&nbsp;&nbsp;Live:&nbsp;&nbsp;</label><input name="aionclassic" type="radio" value="0" th:checked="#{server_id} == '0'" id="alive">
-                    </span>
-                    <span class="restrictionTip" title="Classic Server">
-                        <label for="aclassic" style="font-size:15px">&nbsp;&nbsp;Classic:&nbsp;&nbsp;</label><input name="aionclassic" type="radio" value="1" th:checked="#{server_id} == '1'" id="aclassic">
-                    </span>
 
-                </li>
+
+                <!--/* DUNGEONS */-->
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/dungeons}" data-th-text="#{STR_TOOLTIP_INDUN_NAME}"></a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" >Disabled</a>
                 </li>
             </ul>
             <div class="btn-group">
@@ -186,8 +176,8 @@
         </select>
 
         <select class="selectpicker" id="serverSelect" data-width="150px" onchange="selectServerFunction()">
-            <option data-icon="fa-heart" th:value="0" th:selected="#{server_id} == 0">Live KR</option>
-            <option data-icon="fa-heart" th:value="1" th:selected="#{server_id} == 1">Classic KR</option>
+            <option data-icon="fas fa-poop" th:value="0" th:selected="#{server_id} == 0">Live KR</option>
+            <option data-icon="fas fa-copyright" th:value="1" th:selected="#{server_id} == 1">Classic KR</option>
         </select>
 
 
