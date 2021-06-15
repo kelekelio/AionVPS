@@ -15,3 +15,7 @@ body.questWindow {
     height:510px !important;
     width:410px;
 }
+
+.news {
+    margin-bottom: 20px;
+}
