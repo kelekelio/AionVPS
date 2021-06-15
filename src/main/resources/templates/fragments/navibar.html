@@ -172,12 +172,12 @@
 
         <select class="selectpicker" id="langSelect" data-width="150px" onchange="selectLangFunction()">
             <option data-content='<span class="flag-icon flag-icon-us"></span> English' th:value="en" th:selected="#{loca_string} == 'en'">English</option>
-            <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español' th:value="es" th:selected="#{loca_string} == 'es'">Español</option>
+            <option data-content='<span class="flag-icon flag-icon-mx"></span> Español' th:value="es" th:selected="#{loca_string} == 'es'">Español</option>
         </select>
 
         <select class="selectpicker" id="serverSelect" data-width="150px" onchange="selectServerFunction()">
-            <option data-icon="fas fa-poop" th:value="0" th:selected="#{server_id} == 0">Live KR</option>
-            <option data-icon="fas fa-copyright" th:value="1" th:selected="#{server_id} == 1">Classic KR</option>
+            <option data-icon="fas fa-poop"         th:value="0" th:selected="#{server_id} == 0"> KR Live</option>
+            <option data-icon="fas fa-copyright"    th:value="1" th:selected="#{server_id} == 1"> KR Classic</option>
         </select>
 
 
