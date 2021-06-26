@@ -2,6 +2,7 @@ package pl.aionpb.aion.translation.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import pl.aionpb.aion.db.object.Settings;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,41 +24,27 @@ public class TranslationEntity {
     @Column
     private String name;
 
-    @Column
-    private String body;
-
-    @Column(name = "LAN_EN")
     private String en;
 
-    @Column(name = "LAN_DE")
     private String de;
 
-    @Column(name = "LAN_FR")
     private String fr;
 
-    @Column(name = "LAN_ES")
     private String es;
 
-    @Column(name = "LAN_IT")
     private String it;
 
-    @Column(name = "LAN_PL")
     private String pl;
 
-    @Column(name = "LAN_KO")
     private String ko;
 
-    @Column(name = "LAN_US")
     private String us;
 
-    @Column(name = "LAN_CN")
     private String cn;
 
-
-    public TranslationEntity(Integer id, String name, String body, String en, String de, String fr, String es, String it, String pl, String ko, String us, String cn) {
+    public TranslationEntity(Integer id, String name, String en, String de, String fr, String es, String it, String pl, String ko, String us, String cn) {
         this.id = id;
         this.name = name;
-        this.body = body;
         this.en = en;
         this.de = de;
         this.fr = fr;
@@ -86,14 +73,6 @@ public class TranslationEntity {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
     }
 
     public String getEn() {
@@ -172,17 +151,19 @@ public class TranslationEntity {
     public String getLocaString () {
 
         String loca;
-        String code = "en";
+        String code = Settings.getLocaCode();
+
+        //TODO: finish the switch
 
         switch (code) {
             case "en":
-                loca = (en != null) ? en : body;
+                loca = (en != null) ? en : ko;
                 break;
             case "de":
-                loca =  (de != null) ? de : body;
+                loca =  (de != null) ? de : ko;
                 break;
             default:
-                loca =  (body != null) ? body : name;
+                loca =  (ko != null) ? ko : name;
         }
 
         if (name == null) {

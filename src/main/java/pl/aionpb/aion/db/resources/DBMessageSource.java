@@ -44,16 +44,16 @@ public class DBMessageSource extends AbstractMessageSource {
 
         switch (code) {
             case "en":
-                loca = (message.getEn() != null) ? message.getEn() : message.getBody();
+                loca = (message.getEn() != null) ? message.getEn() : message.getKo();
                 break;
             case "fr":
-                loca = (message.getFr() != null) ? message.getFr() : message.getBody();
+                loca = (message.getFr() != null) ? message.getFr() : message.getKo();
                 break;
             case "de":
-                loca = (message.getDe() != null) ? message.getDe() : message.getBody();
+                loca = (message.getDe() != null) ? message.getDe() : message.getKo();
                 break;
             default:
-                loca = message.getBody();
+                loca = message.getKo();
                 break;
         }
 
